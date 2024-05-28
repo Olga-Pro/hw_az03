@@ -107,7 +107,7 @@ def post_scv():
 
         # Обрабатываем и записываем данные строк
         for row in reader:
-            if row[0].startswith('Диван'):
+            if row[0].startswith('Диван') or "диван" in row[0]:
                 clean_row = clean_price(row[1])
                 writer.writerow([row[0], clean_row, row[2]])
 
